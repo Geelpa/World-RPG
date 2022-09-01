@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <title>Welcome to World RPG!</title>
+</head>
+
+<body>
+    <div class="bg-secondary col-12 vh-100 d-flex align-items-center justify-content-center ">
+        <main class="bg-light col-12 col-md-6 col-lg-4 p-2 rounded h-50">
+            <div class="m-2 p-2 rounded align-items-center col-auto d-flex justify-content-between text-center">
+                <h2 class=" btn-control p-2 rounded  col-10  ">Lobby</h2>
+                <button class="btn btn-control rounded btn-secondary mb-2 " id="myInput" onclick="toggleModal()">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <!-- room list -->
+            <div id="rooms" class="d-flex m-2 row">
+
+                <!-- unique room -->
+                <div class="row bg-white p-2 m-2 rounded w-100 d-flex justify-content-between align-items-center "
+                    id="created_room">
+
+                    <h5 class="m-2">Yone</h5>
+                    <button class="btn btn-control  btn-light">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                </div>
+                <!-- unique room -->
+                <!-- unique room -->
+                <div class="row bg-white p-2 m-2 rounded w-100 d-flex justify-content-between align-items-center "
+                    id="created_room">
+
+                    <h5 class="m-2">Vampire</h5>
+                    <button class="btn btn-control  btn-light">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                </div>
+                <!-- unique room -->
+                <!-- unique room -->
+                <div class="row bg-white p-2 m-2 rounded w-100 d-flex justify-content-between align-items-center "
+                    id="created_room">
+
+                    <h5 class="m-2">Narutibia</h5>
+                    <button class="btn btn-control  btn-light">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                </div>
+                <!-- unique room -->
+            </div>
+
+        </main>
+
+        <div class="modal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered col-12 col-lg-12">
+                <div class="modal-content">
+                    <div class="modal-header border-0 bg-light p-4 col-lg-12 col-12">
+                        <h5 class="modal-title mr-4 mt-1">Create a new room</h5>
+
+                        <button class="btn btn-control rounded-circle btn-secondary" id="myInput"
+                            data-bs-dismiss="modal" aria-label="Close" onclick="toggleModal()">
+                            <i class="fa-solid fa-x"></i>
+                        </button>
+                    </div>
+                    <div class=" d-flex flex-column">
+                        <form id="roomForm" class="register p-3 text-center mb-3 col-12">
+                            <label for="roomName" class="">
+                                <h6>Room name</h6>
+                            </label>
+                            <input type="text" id="roomName" class="form-control mb-4">
+
+                            <label for="playerQtd" class="">
+                                <h6>Players limit</h6>
+                            </label>
+
+
+                            <select name="playerQtd" id="playerQtd" class="form-control mb-4">
+                                <option value="value1"> 1</option>
+                                <option value="value2"> 2</option>
+                                <option value="value3"> 3</option>
+                                <option value="value4" selected> 4 (Recommended)</option>
+                                <option value="value5">5</option>
+                            </select>
+
+                            <label for="password">
+                                <h6>Password (optional)</h6>
+                            </label>
+                            <input type="password" id="password" class="form-control mb-5">
+
+                            <div class="d-flex justify-content-end mt-4">
+                                <button type="submit" id="loginSubmitBtn" class="btn form-control text-light col-4 mb-0"
+                                    style="background: #2da44e;">Create</button>
+                            </div>
+
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        function toggleModal() {
+            const getModal = document.querySelector(".modal")
+            if (getModal.style.display == 'none') {
+                getModal.style.display = "block";
+                getModal.style.background = "rgb(0 0 0 / 75%)";
+            } else {
+                getModal.style.display = " none"
+            }
+        }
+    </script>
+</body>
+
+</html>
