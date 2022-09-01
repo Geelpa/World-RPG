@@ -30,33 +30,22 @@
                 <!-- unique room -->
                 <div class="row bg-white p-2 m-2 rounded w-100 d-flex justify-content-between align-items-center "
                     id="created_room">
-
-                    <h5 class="m-2">Yone</h5>
-                    <button class="btn btn-control  btn-light">
-                        <i class="fa-solid fa-pen"></i>
-                    </button>
+                    <div>
+                        <button class="btn btn-control" onclick="handleEnterSession()">
+                            <h5 class="m-2">Yone</h5>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="btn btn-control  btn-light">
+                            <i class="fa-solid fa-arrow-up" onclick="handleEnterSession()"></i>
+                        </button>
+                        <button class="btn btn-control  btn-light">
+                            <i class="fa-solid fa-pen"></i>
+                        </button>
+                    </div>
                 </div>
                 <!-- unique room -->
-                <!-- unique room -->
-                <div class="row bg-white p-2 m-2 rounded w-100 d-flex justify-content-between align-items-center "
-                    id="created_room">
 
-                    <h5 class="m-2">Vampire</h5>
-                    <button class="btn btn-control  btn-light">
-                        <i class="fa-solid fa-pen"></i>
-                    </button>
-                </div>
-                <!-- unique room -->
-                <!-- unique room -->
-                <div class="row bg-white p-2 m-2 rounded w-100 d-flex justify-content-between align-items-center "
-                    id="created_room">
-
-                    <h5 class="m-2">Narutibia</h5>
-                    <button class="btn btn-control  btn-light">
-                        <i class="fa-solid fa-pen"></i>
-                    </button>
-                </div>
-                <!-- unique room -->
             </div>
 
         </main>
@@ -121,6 +110,10 @@
             } else {
                 getModal.style.display = " none"
             }
+        }
+
+        function handleEnterSession() {
+            window.location.href = 'session.html'
         }
     </script>
 </body>
