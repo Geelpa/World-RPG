@@ -32,11 +32,10 @@
         login(username, password,
             data => {
                 localStorage.setItem('authToken', data.token);
-                window.alert("Senha correta");
-                $("#loginSubmitBtn").prop('disabled', false);
+                window.location.href = './lobby.html';
             },
             error => {
-                window.alert("Senha errada");
+                window.alert("Senha incorreta");
                 $("#loginSubmitBtn").prop('disabled', false);
             })
 
