@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>Sessão RPG</title>
+</head>
+
+<body>
+    <div class="bg-secondary d-flex justify-content-center align-items-center  col-12 vh-100">
+        <!-- principal -->
+        <div class="p-2 bg-light rounded d-inline">
+            <!-- titulo do rpg -->
+            <div id="title" class="">
+                <h1 class="text-center">Yone</h1>
+            </div>
+            <!-- titulo do rpg fim -->
+
+            <!-- registro/combate e pt -->
+            <div id="log" class="d-flex bg-white rounded m-2">
+                <!-- registro de combate -->
+                <div id="combat" class="m-2 col-8 d-flex">
+                    <div class="">
+                        <div class="p-1 bg-light rounded">
+                            <h5 class="text-center">Registro de combate</h5>
+                        </div>
+
+                        <!-- resultados: dados e danos -->
+                        <div id="rolls-log" class="bg-light mt-2 rounded d-flex align-items-end col-12 bg-success">
+                            <div id="sec-rolls-log" class="col-12 bg-danger overflow-scroll d-flex flex-column">
+                                <h6>Primeiro Registro</h6>
+                                <h6>Geelpa healed 9 on Health potion and hits 9 on Enemy mage.</h6>
+                                <h6>Geelpa healed 9 on Health potion and hits 9 on Enemy mage.</h6>
+                                <h6>Geelpa healed 12 on Health potion.</h6>
+                                <h6>Geelpa healed 12 on Health potion.</h6>
+                                <h6>Geelpa healed 12 on Health potion.</h6>
+                                <h6>Geelpa healed 12 on Health potion.</h6>
+                                <h6>Último Registro</h6>
+                            </div>
+                        </div>
+                        <!-- resultados: dados e danos fim-->
+
+                        <!-- skills e dados -->
+                        <div class="d-flex mt-2 rounded w-100 font-weight-bold">
+                            <button class="btn btn-control btn-primary m-1">D4</button>
+                            <button class="btn btn-control btn-primary m-1">D8</button>
+                            <button class="btn btn-control btn-primary m-1">D10</button>
+                            <button class="btn btn-control btn-primary m-1">D12</button>
+                            <button class="btn btn-control btn-primary m-1">D20</button>
+                            <button class="btn btn-control btn-primary m-1">D24</button>
+
+                        </div>
+                        <!-- skills e dados fim -->
+                    </div>
+                </div>
+                <!-- registro de combatefim -->
+
+
+                <!-- party group -->
+                <div id="party" class="m-2 w-50">
+                    <div class="p-1 d-flex justify-content-center bg-light rounded col-auto">
+                        <h5 class=" text-center">Membros do grupo</h5>
+                    </div>
+                    <div class="bg-light rounded mt-2 p-2" style="height:30vh; font-size: 1rem;">
+                        <div class="ml-3">
+                            <h6>Geelpa</h6>
+                            <h6>Geelpa</h6>
+                        </div>
+
+                    </div>
+                    <div class="bg-light rounded mt-2">
+                        <div class="p-1">
+                            <h6 class="ml-3">Tempo de sessão: 00:15:54</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- party group fim -->
+
+            </div>
+            <!-- registro/combate e pt fim -->
+
+
+            <!-- campo de mensagem -->
+            <div class="bg-white d-flex justify-content-between align-items-center rounded m-2 text-dark">
+                <input type="text" name="" id="" placeholder="Mensagem..." class="p-3 m-2 rounded w-100 bg-light"
+                    style="outline: none;">
+                <span class="mb-2 pr-3 ">
+                    <i class="bi bi-arrow-right-circle-fill text-center "
+                        style=" font-size: 2rem; cursor: pointer;"></i>
+                </span>
+            </div>
+            <!-- campo de mensagem  fim-->
+
+        </div>
+        <!-- principal fim -->
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
