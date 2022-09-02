@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,6 +8,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 
 
@@ -16,30 +18,54 @@
 </head>
 
 <body>
-    <div class="bg-secondary d-flex justify-content-center align-items-center  col-12 vh-100">
+    <div class="bg-primary d-flex justify-content-center align-items-center h-100">
         <!-- principal -->
-        <div class="p-2 bg-light rounded d-inline">
+        <main class="p-2 bg-light rounded d-inline col-10 col-lg-7">
             <!-- titulo do rpg -->
-            <div id="title" class="">
+            <div id="title" class="d-flex justify-content-between">
+                <div></div>
                 <h1 class="text-center">Yone</h1>
+                <div>
+                    <!-- control buttons -->
+                    <div class="bg-light rounded mr-1">
+                        <div class="p-1 d-flex m-1 justify-content-around">
+                            <div class=" p-2 bg-white border rounded mr-3 w-50" id="cursorPointer">
+                                <i class="fa-solid fa-pen "></i>
+                            </div>
+                            <div class=" p-2 bg-white border rounded mr-3 w-50" id="cursorPointer">
+                                <i class="fa-solid fa-volume-xmark"></i>
+                            </div>
+                            <div class=" p-2 bg-white border rounded w-50" id="cursorPointer">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!-- control buttons -->
+                </div>
             </div>
             <!-- titulo do rpg fim -->
 
             <!-- registro/combate e pt -->
             <div id="log" class="d-flex bg-white rounded m-2">
+
                 <!-- registro de combate -->
-                <div id="combat" class="m-2 col-8 d-flex">
-                    <div class="">
+                <div id="combat" class="mt-2 d-flex col-9 pl-2 p-0">
+                    <div class="w-100">
                         <div class="p-1 bg-light rounded">
                             <h5 class="text-center">Registro de combate</h5>
                         </div>
 
                         <!-- resultados: dados e danos -->
-                        <div id="rolls-log" class="bg-light mt-2 rounded d-flex align-items-end col-12 bg-success">
-                            <div id="sec-rolls-log" class="col-12 overflow-scroll d-flex flex-column">
+                        <div id="rolls-log" class="bg-light mt-2 rounded d-flex align-items-end col-12">
+                            <div id="sec-rolls-log" class="mt-2 col-12">
                                 <h6>Primeiro Registro</h6>
                                 <h6>Geelpa healed 9 on Health potion and hits 9 on Enemy mage.</h6>
                                 <h6>Geelpa healed 9 on Health potion and hits 9 on Enemy mage.</h6>
+                                <h6>Geelpa healed 12 on Health potion.</h6>
+                                <h6>Geelpa healed 12 on Health potion.</h6>
+                                <h6>Geelpa healed 12 on Health potion.</h6>
                                 <h6>Geelpa healed 12 on Health potion.</h6>
                                 <h6>Geelpa healed 12 on Health potion.</h6>
                                 <h6>Geelpa healed 12 on Health potion.</h6>
@@ -50,60 +76,146 @@
                         <!-- resultados: dados e danos fim-->
 
                         <!-- skills e dados -->
-                        <div class="d-flex mt-2 rounded w-100 font-weight-bold">
-                            <button class="btn btn-control btn-primary m-1">D4</button>
-                            <button class="btn btn-control btn-primary m-1">D8</button>
-                            <button class="btn btn-control btn-primary m-1">D10</button>
-                            <button class="btn btn-control btn-primary m-1">D12</button>
-                            <button class="btn btn-control btn-primary m-1">D20</button>
-                            <button class="btn btn-control btn-primary m-1">D24</button>
-
+                        <div class="d-flex mt-2 mb-2 rounded justify-content-around ">
+                            <div class="rounded bg-dark text-light text-center h-25 p-1 w-75 border border-0 p-0">
+                                <p class="">D4</p>
+                            </div>
+                            <div class="rounded bg-dark text-light text-center h-25 p-1 w-75 border border-0 p-0 ml-2">
+                                <p class="">D6</p>
+                            </div>
+                            <div class="rounded bg-dark text-light text-center h-25 p-1 w-75 border border-0 p-0 ml-2">
+                                <p class="">D8</p>
+                            </div>
+                            <div class="rounded bg-dark text-light text-center h-25 p-1 w-75 border border-0 p-0 ml-2">
+                                <p class="">D10</p>
+                            </div>
+                            <div class="rounded bg-dark text-light text-center h-25 p-1 w-75 border border-0 p-0 ml-2">
+                                <p class="">D12</p>
+                            </div>
+                            <div class="rounded bg-dark text-light text-center h-25 p-1 w-75 border border-0 p-0 ml-2">
+                                <p class="">D20</p>
+                            </div>
+                            <div class="rounded bg-dark text-light text-center h-25 p-1 w-75 border border-0 p-0 ml-2">
+                                <p class="">D24</p>
+                            </div>
                         </div>
                         <!-- skills e dados fim -->
                     </div>
                 </div>
                 <!-- registro de combatefim -->
 
-
                 <!-- party group -->
-                <div id="party" class="m-2 w-50">
-                    <div class="p-1 d-flex justify-content-center bg-light rounded col-auto">
+                <div id="party" class="m-2 w-100">
+                    <div class="p-1 d-flex justify-content-center bg-light rounded">
                         <h5 class=" text-center">Membros do grupo</h5>
                     </div>
-                    <div class="bg-light rounded mt-2 p-2" style="height:30vh; font-size: 1rem;">
-                        <div class="ml-3">
-                            <h6>Geelpa</h6>
-                            <h6>Geelpa</h6>
+                    <div class="d-flex flex-column justify-content-around">
+                        <div class="bg-light rounded mt-2 p-2">
+                            <div class="mb-1">
+                                <h6>Geelpa</h6>
+                                <h6>Cris</h6>
+                                <h6>Laura</h6>
+                                <h6>Cadu</h6>
+                            </div>
                         </div>
+                    </div>
+                    <div class="d-flex flex-column  h-50">
 
-                    </div>
-                    <div class="bg-light rounded mt-2">
-                        <div class="p-1">
-                            <h6 class="ml-3">Tempo de sessão: 00:15:54</h6>
+
+                        <div class="mt-2 p-1 d-flex justify-content-center bg-dark rounded text-light">
+                            <h5 class=" text-center ">Membros inimigos</h5>
+                        </div>
+                        <div class="bg-dark rounded mt-2 p-2 text-light">
+                            <div class="mb-1">
+                                <h6>Mage</h6>
+                                <h6>Mage</h6>
+                                <h6>Mage</h6>
+                            </div>
+                        </div>
+                        <div class="bg-light rounded mt-2">
+                            <div class="p-1">
+                                <h6 class="p-1">Tempo de sessão: 00:15:54</h6>
+                            </div>
+
                         </div>
                     </div>
+
+                    <!-- control buttons -->
+                    <!-- <div class="bg-light rounded mb-2">
+                        <div class="p-1 d-flex mt-2 justify-content-around">
+                            <div class=" p-1 bg-white border rounded pointer">
+                                <i class="fa-solid fa-pen"></i>
+                            </div>
+                            <div class=" p-1 bg-white border rounded">
+                                <i class="fa-solid fa-volume-off"></i>
+                            </div>
+                            <div class=" p-1 bg-white border rounded">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- control buttons -->
+
                 </div>
                 <!-- party group fim -->
 
             </div>
             <!-- registro/combate e pt fim -->
-
-
             <!-- campo de mensagem -->
-            <div class="bg-white d-flex justify-content-between align-items-center rounded m-2 text-dark">
-                <input type="text" name="" id="" placeholder="Mensagem..." class="p-3 m-2 rounded col-11 bg-light input-group border-0">
-                <span class="mb-2 pr-3 ">
-                    <i class="bi bi-arrow-right-circle-fill text-center "
-                        style=" font-size: 2rem; cursor: pointer;"></i>
-                </span>
+            <div class="text-dark m-2 w-auto">
+                <input type="text" name="" id="" placeholder="Mensagem..."
+                    class=" bg-white p-4 w-100 rounded form-control">
+
             </div>
             <!-- campo de mensagem  fim-->
 
-        </div>
+        </main>
         <!-- principal fim -->
 
     </div>
-    <script src="script.js"></script>
+    <style>
+        * {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body>div {
+            height: 100vh;
+            width: 100vw;
+            background: url("https://i.pinimg.com/originals/1e/0a/42/1e0a42bd8392c6cdb1d1d0921befd4b4.jpg");
+            background-size: cover;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        #cursorPointer {
+            cursor: pointer;
+
+        }
+
+        #cursorPointer:hover {
+            background-color: #f8f9fa !important;
+        }
+
+        #sec-rolls-log {
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+
+    <script>
+
+        function letMeDown() {
+            var scrollable = document.querySelector("#sec-rolls-log")
+            scrollable.scrollTo(0, scrollable.scrollHeight - scrollable.clientHeight);
+        }
+        window.addEventListener('load', letMeDown)
+    </script>
 </body>
 
 </html>
