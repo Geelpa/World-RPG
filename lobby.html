@@ -23,11 +23,11 @@
 
     import { getRooms } from './ajax/rooms.js';
 
-    function goToLobby(roomId) {
+    function goToSession(roomId) {
         window.location.href = `./session.html?roomid=${roomId}`;
     }
 
-    window.goToLobby = goToLobby;
+    window.goToSession = goToSession;
 
     getRooms(
         data => {
@@ -43,7 +43,7 @@
                         </button>
                     </div>
 
-                    <div onclick="goToLobby('${r.id}')" class="d-flex m-2">
+                    <div onclick="goToSession('${r.id}')" class="d-flex m-2">
                         <div class="btnEnterSession mr-2">
                             <button class="btnEnterSession btn btn-control btn-light">
                                 <i class="fa-solid fa-arrow-up"></i>
