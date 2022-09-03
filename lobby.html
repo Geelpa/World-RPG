@@ -12,32 +12,38 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
     <title>Welcome to World RPG!</title>
+
 </head>
 
-<body>
-    <div class="bg-secondary col-12 vh-100 d-flex align-items-center justify-content-center ">
-        <main class="bg-light col-12 col-md-8 col-lg-4 p-2 rounded h-50">
-            <div class="m-2 p-2 rounded align-items-center col-auto d-flex justify-content-between text-center">
-                <h2 class=" btn-control p-2 rounded  col-10  ">Lobby</h2>
-                <button class="btn btn-control rounded btn-secondary mb-2" id="myInput" onclick="toggleModal()">
-                    <i class="fa-solid fa-plus"></i>
-                </button>
-            </div>
-            <!-- room list -->
-            <div id="rooms" class="d-flex m-2 row">
+<script type="module">
 
-                <!-- unique room -->
+    import { getRooms } from './ajax/rooms.js';
+
+    function goToSession(roomId) {
+        window.location.href = `./session.html?roomid=${roomId}`;
+    }
+
+    window.goToSession = goToSession;
+
+    getRooms(
+        data => {
+            var rooms = '';
+            for (var r of data) {
+                var _thisRoom = `
                 <div class="row bg-white m-2 rounded w-100 d-flex justify-content-between align-items-center "
                     id="created_room">
 
                     <div class="btnEnterSession">
-                        <button class="btn btn-control" >
-                            <h5 class="m-2">Yone</h5>
+                        <button class="btn btn-control">
+                            <h5 class="m-2">${r.name}</h5>
                         </button>
                     </div>
 
-                    <div class="d-flex m-2">
+                    <div onclick="goToSession('${r.id}')" class="d-flex m-2">
                         <div class="btnEnterSession mr-2">
                             <button class="btnEnterSession btn btn-control btn-light">
                                 <i class="fa-solid fa-arrow-up"></i>
@@ -51,7 +57,34 @@
                         </div>
                     </div>
                 </div>
-                <!-- unique room -->
+                `;
+
+                rooms += _thisRoom;
+            }
+
+            $("#rooms").html(rooms);
+
+        },
+        error => {
+            console.log(error);
+        }
+    )
+
+
+
+</script>
+
+<body>
+    <div class="bg-secondary col-12 vh-100 d-flex align-items-center justify-content-center ">
+        <main class="bg-light col-12 col-md-8 col-lg-4 p-2 rounded h-50">
+            <div class="m-2 p-2 rounded align-items-center col-auto d-flex justify-content-between text-center">
+                <h2 class=" btn-control p-2 rounded  col-10  ">Lobby</h2>
+                <button class="btn btn-control rounded btn-secondary mb-2" id="myInput" onclick="toggleModal()">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <!-- room list -->
+            <div id="rooms" class="d-flex m-2 row">
 
             </div>
 

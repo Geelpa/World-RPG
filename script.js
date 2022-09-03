@@ -12,11 +12,3 @@ function handleEnterSession() {
     window.location.href = 'session.html'
 
 }
-
-document.querySelector('.btnEnterSession').
-    addEventListener('click', handleEnterSession);
-
-
-
-
-
